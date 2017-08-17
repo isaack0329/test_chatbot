@@ -12,8 +12,11 @@ def hello_world():
 
 @app.route('/keyboard')
 def keyboard():
-    ret = '{"type" : "buttons",  "buttons" : ["선택 1", "선택 2", "선택 3"]}'
-    return ret
+    keyboard = {"type" : "buttons",  "buttons" : ["선택 1", "선택 2", "선택 3"]}
+    return keyboard
+@app.route('/message')
+def messauge():
+    return
 
 if __name__ == '__main__':
     app.debug = True
