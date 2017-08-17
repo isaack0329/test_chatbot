@@ -7,8 +7,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Flask!'
+    return 'Hello from Flask!222222222222222222'
 
 @app.route('/keyboard')
 def keyboard():
-    return 'Hello from Flask!'
+
+    ret = {
+  "type" : "buttons",
+  "buttons" : ["선택 1", "선택 2", "선택 3"]
+}
+
+    return ret
+
+app.run()
