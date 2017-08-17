@@ -1,7 +1,8 @@
-
+# _*_ coding: utf-8 _*_
 # A very simple Flask Hello World app for you to get started with...
 
 from flask import Flask
+from flask import Flask, request, session, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -11,12 +12,11 @@ def hello_world():
 
 @app.route('/keyboard')
 def keyboard():
-
-    ret = {
-  "type" : "buttons",
-  "buttons" : ["선택 1", "선택 2", "선택 3"]
-}
-
+    ret = '{"type" : "buttons",  "buttons" : ["선택 1", "선택 2", "선택 3"]}'
     return ret
 
+if __name__ == '__main__':
+    app.debug = True
 
+
+app.run()
